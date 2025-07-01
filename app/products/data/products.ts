@@ -1,0 +1,28 @@
+import { ProductData } from "../StaticTypes";
+
+export const ProductsData: ProductData[] = [
+  {
+    id: 1,
+    description: "Calcium worm oil is a natural nutritional source made from 100% dried calcium worms, extracted using high-pressure pressing. Rich in unsaturated fatty acids like lauric, myristic, and palmitic acid, it supports healthy growth, enhances coloration in Koi fish, and improves immune function. \n\n ✅ Safe, digestible, and ideal for ornamental fish, poultry, and birds. \n\n Usage: Feed directly or mix with daily feed 1–2 times per day.",
+    image_url: "/images/products/black_soldier_fly_oil.png",
+    name: "Black Fly Larvae Oil",
+  },
+  {
+    id: 2,
+    description: "This 100% natural, eco-friendly fertilizer is made from the frass (waste) of black soldier fly larvae. It contains nitrogen, phosphorus, potassium, chitin, and beneficial microbes that improve soil health, enhance root growth, and increase plant resistance to pests and diseases. \n ✅ Safe for vegetables, fruits, flowers, and indoor plants. \n\n Usage: \n • Vegetables/flowers: Mix 1–2 handfuls every 2–3 weeks \n • Potted plants: Apply monthly \n • Lawns: Spread evenly and water well",
+    image_url: "/images/products/black_soldier_fly_fertilizer.png",
+    name: "Product Two",
+  },
+  {
+    id: 3,
+    description: "Calcium worm powder (Black Soldier Fly Larvae Meal) is a nutrient-rich feed ingredient ideal for livestock, poultry, and aquaculture. It promotes weight gain, strengthens bones, enhances eggshell quality, and boosts immunity thanks to its high protein, calcium, and mineral content. \n\n ✅ Easily digestible and optimizes nutrient absorption. \n\n Usage: \n • Poultry: Mix 5–10% in feed \n • Pigs/Livestock: 5–10% \n • Aquaculture: 2–5%",
+    image_url: "/images/products/black_soldier_fly_powder.png",
+    name: "Black Fly Larvae Powder",
+  },
+  {
+    id: 4,
+    description: "Dried calcium worms (black soldier fly larvae) are carefully cleaned and processed using advanced microwave drying technology, effectively eliminating harmful bacteria like E. coli and Salmonella. Rich in protein, calcium, and healthy fats, they are suitable for a wide range of pets including poultry, aquatic pets, reptiles, birds, and small animals. \n\n ✔️ Protein 51.4% | Calcium 9.44% | Fat 7.38% – Supports muscle growth, bone strength, and overall health. \n\n ✅ Perfect for chickens, ducks, fish, lizards, parrots, and more!",
+    image_url: "/images/products/dried_black_soldier_fly_larvae.png",
+    name: "Dried Black Fly Larvae",
+  },
+];
