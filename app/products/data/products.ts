@@ -11,7 +11,7 @@ export const ProductsData: ProductData[] = [
     id: 2,
     description: "This 100% natural, eco-friendly fertilizer is made from the frass (waste) of black soldier fly larvae. It contains nitrogen, phosphorus, potassium, chitin, and beneficial microbes that improve soil health, enhance root growth, and increase plant resistance to pests and diseases. \n ✅ Safe for vegetables, fruits, flowers, and indoor plants. \n\n Usage: \n • Vegetables/flowers: Mix 1–2 handfuls every 2–3 weeks \n • Potted plants: Apply monthly \n • Lawns: Spread evenly and water well",
     image_url: "/images/products/black_soldier_fly_fertilizer.png",
-    name: "Product Two",
+    name: "Black Fly Larvae Fertilizer",
   },
   {
     id: 3,
@@ -25,4 +25,10 @@ export const ProductsData: ProductData[] = [
     image_url: "/images/products/dried_black_soldier_fly_larvae.png",
     name: "Dried Black Fly Larvae",
   },
+  {
+    id: 5,
+    description: "50 grams of BSF eggs can yield 160–400 kg of fresh larvae under optimal conditions. These calcium worm eggs are laid by the Black Soldier Fly and develop into nutrient-rich larvae commonly used for animal feed. Incubation: Use substrates like rice bran, soybean pulp, or fruit scraps. Maintain moisture and airflow for successful hatching in 24–48 hours. \n\n ✅ Ideal for farms producing fresh larvae for feed or waste processing.",
+    image_url: "/images/products/black_fly_larvae_eggs.png",
+    name: "Black Fly Larvae Eggs"
+  }
 ];

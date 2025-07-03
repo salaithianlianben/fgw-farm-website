@@ -12,7 +12,7 @@ const ProductItem = ({ index, item }: ProductItemProps) => {
         <img
           src={item.image_url}
           alt={item.name}
-          className="h-[350px] w-[200px] object-cover"
+          className="h-[350px] w-[350px] object-cover"
         />
       </div>
       <div className="col-span-2 space-y-4">
@@ -27,7 +27,7 @@ const ProductItem = ({ index, item }: ProductItemProps) => {
         <p className="text-gray-700 whitespace-pre-line">{item.description}</p>
       </div>
       <div className="col-span-1 flex items-center justify-center">
-        <img src={item.image_url} className="h-[350px] w-[200px] object-cover" />
+        <img src={item.image_url} className="h-[350px] w-[350px] object-cover" />
       </div>
     </div>
   );

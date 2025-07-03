@@ -13,8 +13,8 @@ const Video = () => {
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Your Trusted Partner in Sustainable Nutrition"
+          paragraph="At FGW FARM, we specialize in producing high-quality Black Soldier Fly larvae products—dried, powdered, and essential oils. Our mission is to deliver nutritious, eco-friendly solutions through a customer-first approach and nationwide distribution."
           center
           mb="80px"
         />
@@ -26,7 +26,11 @@ const Video = () => {
               data-wow-delay=".15s"
             >
               <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/video.jpg" alt="video image" fill />
+                <Image
+                  src="/images/video/fgm-video-thumbnail.jpg"
+                  alt="video image"
+                  fill
+                />
                 <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
                   <button
                     aria-label="video play button"
@@ -54,7 +58,7 @@ const Video = () => {
         autoplay={true}
         start={true}
         isOpen={isOpen}
-        videoId="L61p2uyiMSo"
+        videoId="bjQ1IizwaDs"
         onClose={() => setOpen(false)}
       />
 

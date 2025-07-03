@@ -86,20 +86,24 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <Image
-                  src="/images/logo/logo_with_name.png"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
-                />
-                <Image
-                  src="/images/logo/logo.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
-                />
+                {/* logo_farm_white_text.png */}
+                {!sticky && usePathName === "/" ? (
+                  <Image
+                    src="/images/logo/logo_farm_white_text.png"
+                    alt="logo"
+                    width={140}
+                    height={30}
+                    className="w-full"
+                  />
+                ) : (
+                  <Image
+                    src="/images/logo/logo_with_name.png"
+                    alt="logo"
+                    width={140}
+                    height={30}
+                    className="w-full "
+                  />
+                )}
               </Link>
             </div>
             <div className="flex w-full items-center justify-end space-x-8">
@@ -140,11 +144,9 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-                              usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
-                            }`}
+                            className={`flex py-2 text-base hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                              usePathName === menuItem.path && "text-primary"
+                            } ${usePathName === "/" && menuItem.title !== "home" && !sticky ? "text-white" : ""}`}
                           >
                             {t(`navigation.${menuItem.title}`)}
                           </Link>

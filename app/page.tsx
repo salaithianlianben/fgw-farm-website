@@ -7,6 +7,7 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
+import ProductsFeature from "@/components/Products";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
@@ -21,15 +22,15 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-      <Features />
+      <ProductsFeature />
       <Video />
-      <Brands />
+      {/* <Brands /> */}
       <AboutSectionOne />
       <AboutSectionTwo />
-      <Testimonials />
+      {/* <Testimonials />
       <Pricing />
-      <Blog />
-      <Contact />
+      <Blog /> */}
+      {/* <Contact /> */}
     </>
   );
 }
