@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  PhoneIcon,
-  ShieldCheckIcon,
-  UserPlus,
-} from "lucide-react";
+import { PhoneIcon, ShieldCheckIcon, UserPlus } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -67,6 +63,16 @@ const Footer = () => {
                     <p className="text-base leading-relaxed text-body-color dark:text-body-color-dark">
                       AUGUST 11, 2022
                     </p>
+                  </div>
+
+                  <div className="flex items-center space-x-2">
+                    <img
+                      src={"/images/about/zalo_logo.webp"}
+                      className="h-5 w-5"
+                    />
+                    <a href="https://zalo.me/0974371490" className="text-base leading-relaxed text-body-color dark:text-body-color-dark hover:text-blue-500">
+                      097 437 1490
+                    </a>
                   </div>
                 </div>
                 {/* <div className="flex items-center">

@@ -1,35 +1,34 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { News } from "../StaticTypes";
-import { news_data } from "../data";
+import { ProductData } from "../StaticTypes";
+import { ProductsData } from "../data/products";
 
-const NewsDetail = ({ params }: { params: { id: string } }) => {
-  const [newsData, setNewsData] = useState<News | undefined>();
+const ProductDetail = ({ params }: { params: { id: string } }) => {
+  const [ productData, setProductData] = useState<ProductData | undefined>();
   useEffect(() => {
     if (params.id) {
-      setNewsData(news_data.find((item) => item.id === Number(params.id)));
+      setProductData(ProductsData.find((item) => item.id === Number(params.id)));
     }
   }, [params]);
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
         <div className="container">
-          {newsData ? (
+          {productData ? (
             <>
               <div className="space-y-3 border-b pb-8">
-                <h1 className="text-3xl font-bold">{newsData.title}</h1>
-                <p className="text-gray-500">{"• " + newsData.date}</p>
+                <h1 className="text-3xl font-bold">{productData.name}</h1>
               </div>
               <div className="space-y-2 py-5">
                 <div className="flex items-start justify-start rounded-lg">
                   <img
-                    src={newsData.img_url}
+                    src={productData.image_url}
                     className="h-[600px] rounded-lg object-contain"
                   />
                 </div>
                 <p className="whitespace-pre-line leading-9">
-                  {newsData.content}
+                  {productData.description}
                 </p>
               </div>
             </>
@@ -42,4 +41,4 @@ const NewsDetail = ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default NewsDetail;
+export default ProductDetail;
