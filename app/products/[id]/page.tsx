@@ -3,14 +3,16 @@
 import { useEffect, useState } from "react";
 import { products_data } from "../data/products";
 import { Product } from "@/types/product";
+import { useParams } from "next/navigation";
 
-const ProductDetail = ({ params }: { params: { id: string } }) => {
+const ProductDetail = () => {
+  const { id } = useParams<{ id: string }>();
   const [ productData, setProductData] = useState<Product | undefined>();
   useEffect(() => {
-    if (params.id) {
-      setProductData(products_data.find((item) => item.id === Number(params.id)));
+    if (id) {
+      setProductData(products_data.find((item) => item.id === Number(id)));
     }
-  }, [params]);
+  }, [id]);
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
