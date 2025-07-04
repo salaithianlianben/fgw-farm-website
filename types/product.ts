@@ -4,4 +4,6 @@ export interface Product {
     description: string
     image_url: string
     short_description: string
+    alibaba_link?: string
+    shopee_link?: string
 }
