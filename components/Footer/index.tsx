@@ -16,23 +16,9 @@ const Footer = () => {
               <div className="mb-12 lg:mb-16">
                 <Link
                   href="/"
-                  className="mb-8 inline-block flex flex-row items-center space-x-3"
+                  className="mb-8 inline-block"
                 >
-                  <div>
-                    <img
-                      src="/images/logo/logo-xanh.png"
-                      alt="logo"
-                      className="h-[50px] w-[50px] w-full dark:hidden"
-                    />
-                    <img
-                      src="/images/logo/logo.png"
-                      alt="logo"
-                      className="hidden h-[50px] w-[50px] w-full dark:block"
-                    />
-                  </div>
-                  <span className="text-2xl font-bold text-primary dark:text-white">
-                    FGW FARM
-                  </span>
+                  <img src={'/images/logo/logo_with_name.png'} className="h-[80px] w-full object-contain"/>
                 </Link>
                 <div className="mb-9">
                   <p className="text-base leading-relaxed text-body-color dark:text-body-color-dark">
@@ -205,7 +191,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+          <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
               © 2025 FGW FARM CO., LTD. All Rights Reserved.

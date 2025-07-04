@@ -1,8 +1,8 @@
-import { ProductData } from "../StaticTypes";
+import { Product } from "@/types/product";
 
 interface ProductItemProps {
   index: number;
-  item: ProductData;
+  item: Product;
 }
 
 const ProductItem = ({ index, item }: ProductItemProps) => {
@@ -17,14 +17,14 @@ const ProductItem = ({ index, item }: ProductItemProps) => {
       </div>
       <div className="col-span-2 space-y-4">
         <h2 className="text-xl font-bold">{item.name}</h2>
-        <p className="text-gray-700 whitespace-pre-line line-clamp-8">{item.description}</p>
+        <p className="text-gray-700 whitespace-pre-line line-clamp-10">{item.description}</p>
       </div>
     </div>
   ) : (
     <div className="grid grid-cols-3">
       <div className="col-span-2 space-y-4">
         <p className="text-xl font-bold">{item.name}</p>
-        <p className="text-gray-700 whitespace-pre-line line-clamp-8">{item.description}</p>
+        <p className="text-gray-700 whitespace-pre-line line-clamp-10">{item.description}</p>
       </div>
       <div className="col-span-1 flex items-center justify-center">
         <img src={item.image_url} className="h-[350px] w-[350px] object-cover" />

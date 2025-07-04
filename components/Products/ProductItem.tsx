@@ -1,18 +1,18 @@
-import { ProductData } from "./products";
+import { Product } from "@/types/product";
 
-const ProductItem = ({ product }: { product: ProductData }) => {
-  const { description, id, image_url, name } = product;
+const ProductItem = ({ product }: { product: Product }) => {
+  const { image_url, name, short_description } = product;
   return (
     <div className="w-full">
       <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="mb-10 flex h-[250px] w-full items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+        <div className="mb-5 flex h-[350px] w-full items-center justify-center rounded-md bg-primary/10 bg-opacity-10 text-primary">
           <img src={image_url} className="object-contain w-full h-full"/>
         </div>
         <h3 className="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
           {name}
         </h3>
-        <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
-          {description}
+        <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color whitespace-pre-line">
+          {short_description}
         </p>
       </div>
     </div>

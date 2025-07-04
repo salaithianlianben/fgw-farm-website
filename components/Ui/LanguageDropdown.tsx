@@ -66,7 +66,7 @@ const LanguageDropdown: React.FC<IconDropdownProps> = ({
       <div>
         <button
           type="button"
-          className="inline-flex w-full items-center justify-between gap-x-1 rounded-lg px-2 py-1 text-sm font-medium text-gray-700 shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
+          className="inline-flex w-full items-center justify-between gap-x-1 rounded-lg px-2 py-1 text-sm font-medium text-gray-700 shadow-xs transition-all duration-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2"
           onClick={() => setIsOpen(!isOpen)}
           onKeyDown={handleKeyDown}
           aria-expanded={isOpen}
@@ -91,7 +91,7 @@ const LanguageDropdown: React.FC<IconDropdownProps> = ({
       </div>
 
       {isOpen && (
-        <div className="animate-in fade-in-0 zoom-in-95 absolute right-0 z-10 mt-2 origin-top-right rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 duration-200 focus:outline-none">
+        <div className="animate-in fade-in-0 zoom-in-95 absolute right-0 z-10 mt-2 origin-top-right rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 duration-200 focus:outline-hidden">
           <div className="py-1">
             {items.map((item) => (
               <button
@@ -101,11 +101,11 @@ const LanguageDropdown: React.FC<IconDropdownProps> = ({
                 className={`group flex w-full items-center gap-x-1 px-2 py-1 text-sm transition-colors duration-150 ${
                   item.disabled
                     ? "cursor-not-allowed text-gray-400"
-                    : "hover:bg-opacity-90 focus:bg-opacity-50 focus:outline-none"
+                    : "hover:bg-opacity-90 focus:bg-opacity-50 focus:outline-hidden"
                 }`}
               >
                 <span
-                  className={`flex-shrink-0 ${
+                  className={`shrink-0 ${
                     item.disabled
                       ? "text-gray-300"
                       : "text-gray-500 group-hover:text-gray-700"

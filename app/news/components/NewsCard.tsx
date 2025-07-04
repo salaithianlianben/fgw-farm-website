@@ -13,10 +13,10 @@ const NewsCard = ({ news }: NewsCardProps) => {
 
   return (
     <div
-      className="flex h-full w-full cursor-pointer flex-col space-y-3 rounded-lg shadow justify-between"
+      className="flex h-full w-full cursor-pointer flex-col space-y-3 rounded-lg shadow-sm justify-between"
     >
       <div>
-        <img src={news.img_url} className="h-[400px] w-full rounded" />
+        <img src={news.img_url} className="h-[400px] w-full rounded-sm" />
         <div className="space-y-2 px-4 py-3">
           <p className="text-center text-lg">{news.title}</p>
           <p className="line-clamp-7 whitespace-pre-line text-center text-sm">

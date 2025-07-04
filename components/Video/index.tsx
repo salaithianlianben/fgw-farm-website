@@ -25,7 +25,7 @@ const Video = () => {
               className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
               data-wow-delay=".15s"
             >
-              <div className="relative aspect-[77/40] items-center justify-center">
+              <div className="relative aspect-77/40 items-center justify-center">
                 <Image
                   src="/images/video/fgm-video-thumbnail.jpg"
                   alt="video image"

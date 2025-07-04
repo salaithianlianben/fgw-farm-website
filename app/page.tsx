@@ -11,6 +11,7 @@ import ProductsFeature from "@/components/Products";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
+import { products_data } from "./products/data/products";
 
 export const metadata: Metadata = {
   title: "FGW FARM",
@@ -22,7 +23,7 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-      <ProductsFeature />
+      <ProductsFeature data={products_data}/>
       <Video />
       {/* <Brands /> */}
       <AboutSectionOne />

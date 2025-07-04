@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ProductData } from "../StaticTypes";
-import { ProductsData } from "../data/products";
+import { products_data } from "../data/products";
+import { Product } from "@/types/product";
 
 const ProductDetail = ({ params }: { params: { id: string } }) => {
-  const [ productData, setProductData] = useState<ProductData | undefined>();
+  const [ productData, setProductData] = useState<Product | undefined>();
   useEffect(() => {
     if (params.id) {
-      setProductData(ProductsData.find((item) => item.id === Number(params.id)));
+      setProductData(products_data.find((item) => item.id === Number(params.id)));
     }
   }, [params]);
   return (
