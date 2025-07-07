@@ -29,7 +29,7 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-1/2">
               <h2 className="mb-4 text-3xl font-bold leading-tight! text-black dark:text-white sm:text-4xl md:text-[45px]">
-                {"FGW FARM Company"}
+                {"FGW FARM CO., LTD"}
               </h2>
               <p className="whitespace-pre-line text-base leading-relaxed! text-body-color md:text-lg">
                 {

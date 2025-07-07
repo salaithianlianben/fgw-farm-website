@@ -8,7 +8,7 @@ const ProductsFeature = ({ data = [] }: { data?: Product[]}) => {
         <div className="container">
           <SectionTitle
             title="Products"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            paragraph="Explore our range of sustainable, high-quality products made from Black Soldier Fly larvae — including dried larvae, protein powder, ..etc. "
             center
           />
 

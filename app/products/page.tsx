@@ -11,7 +11,7 @@ const ProductsPage = () => {
     <>
       <Breadcrumb
         pageName={t("navigation.products")}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        description="Explore our range of sustainable, high-quality products made from Black Soldier Fly larvae — including dried larvae, protein powder, ..etc. "
       />
       <section id="products" className="overflow-hidden">
         <div className="container space-y-9">
