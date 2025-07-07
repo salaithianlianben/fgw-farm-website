@@ -18,12 +18,28 @@ interface LanguageOption {
 
 const languageOptions = [
   {
-    icon: <img src={"/images/flags/english-flag.svg"} className="h-5 w-6" />,
+    icon: (
+      <Image
+        src="/images/flags/english-flag.svg"
+        alt="English"
+        width={24}
+        height={20}
+        className="h-5 w-6"
+      />
+    ),
     id: "en",
     // label: "English"
   },
   {
-    icon: <img src={"/images/flags/korea-flag.svg"} className="h-5 w-6" />,
+    icon: (
+      <Image
+        src="/images/flags/korea-flag.svg"
+        alt="English"
+        width={24}
+        height={20}
+        className="h-5 w-6"
+      />
+    ),
     id: "zh",
     // label: "Korean"
   },
@@ -71,9 +87,9 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
+        className={`header top-0 left-0 z-40 flex w-full items-center ${
           sticky
-            ? "fixed z-9999 bg-white !bg-opacity-80 shadow-sticky backdrop-blur-xs transition dark:bg-gray-dark dark:shadow-sticky-dark"
+            ? "!bg-opacity-80 shadow-sticky dark:bg-gray-dark dark:shadow-sticky-dark fixed z-9999 bg-white backdrop-blur-xs transition"
             : "absolute bg-transparent"
         }`}
       >
@@ -87,7 +103,7 @@ const Header = () => {
                 } `}
               >
                 {/* logo_farm_white_text.png */}
-                {!sticky && ( usePathName === "/" || usePathName === "/news" )? (
+                {!sticky && (usePathName === "/" || usePathName === "/news") ? (
                   <Image
                     src="/images/logo/logo_farm_white_text.png"
                     alt="logo"
@@ -101,7 +117,7 @@ const Header = () => {
                     alt="logo"
                     width={140}
                     height={30}
-                    className="w-full "
+                    className="w-full"
                   />
                 )}
               </Link>
@@ -112,27 +128,27 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                  className="ring-primary absolute top-1/2 right-4 block translate-y-[-50%] rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden"
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[7px] rotate-45" : " "
+                      navbarOpen ? "top-[7px] rotate-45" : " "
                     }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? "opacity-0 " : " "
+                      navbarOpen ? "opacity-0" : " "
                     }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[-8px] -rotate-45" : " "
+                      navbarOpen ? "top-[-8px] -rotate-45" : " "
                     }`}
                   />
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
+                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -144,9 +160,9 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            className={`hover:text-primary flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path && "text-primary"
-                            } ${( (usePathName === "/" && menuItem.title !== "home") || (usePathName === "/news" && menuItem.title !== "news")) && !sticky ? "text-white" : ""}`}
+                            } ${((usePathName === "/" && menuItem.title !== "home") || (usePathName === "/news" && menuItem.title !== "news")) && !sticky ? "text-white" : ""}`}
                           >
                             {t(`navigation.${menuItem.title}`)}
                           </Link>
@@ -154,7 +170,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -169,7 +185,7 @@ const Header = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu relative left-0 top-full rounded-xs bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu dark:bg-dark relative top-full left-0 rounded-xs bg-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
@@ -177,7 +193,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="block rounded-sm py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-white/70 dark:hover:text-white"
                                 >
                                   {submenuItem.title}
                                 </Link>

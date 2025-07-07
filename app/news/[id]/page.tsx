@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { news_data } from "../data";
 import { News } from "../StaticTypes";
+import Image from "next/image";
 
 const NewsDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -27,12 +28,15 @@ const NewsDetail = () => {
             </div>
             <div className="space-y-2 py-5">
               <div className="flex items-start justify-start rounded-lg">
-                <img
+                <Image
                   src={newsItem.img_url}
+                  alt={newsItem.title || "News article image"}
+                  width={800}
+                  height={600}
                   className="h-[600px] rounded-lg object-contain"
                 />
               </div>
-              <p className="whitespace-pre-line leading-9">
+              <p className="leading-9 whitespace-pre-line">
                 {newsItem.content}
               </p>
             </div>

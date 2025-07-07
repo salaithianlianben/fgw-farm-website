@@ -7,6 +7,7 @@ import {
   UserPlus,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image"
 
 const Footer = () => {
   return (
@@ -20,10 +21,13 @@ const Footer = () => {
             <div className="w-full px-4 col-span-3">
               <div className="mb-12">
                 <Link href="/" className="mb-4 inline-block">
-                  <img
-                    src={"/images/logo/logo_with_name.png"}
-                    className="h-[80px] w-full object-contain"
-                  />
+                  <Image
+  src="/images/logo/logo_with_name.png"
+  alt="Company logo"
+  width={300}
+  height={80}
+  className="h-[80px] w-full object-contain"
+/>
                 </Link>
                 <div className="mb-9">
                   {/* <p className="text-base leading-relaxed text-body-color dark:text-body-color-dark">
