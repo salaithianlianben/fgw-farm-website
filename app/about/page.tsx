@@ -14,7 +14,7 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
+        pageName="About"
         description="Pioneering sustainable agriculture through insect farming and innovation."
       />
       <AboutSectionOne />

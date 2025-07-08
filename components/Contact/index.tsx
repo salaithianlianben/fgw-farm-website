@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section id="contact" className="mb-9 overflow-hidden py-9">
       <div className="container">
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
           <div className="flex h-[180px] flex-col justify-between rounded border p-4 shadow">
             <div className="flex">
               <div className="flex rounded border p-2">

@@ -8,7 +8,7 @@ const NewsHero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-[url('/images/hero/factory_img.jpeg')] bg-cover bg-center pb-16 pt-[100px] md:pb-[100px] md:pt-[130px] xl:pb-[150px] xl:pt-[160px] 2xl:pb-[180px] 2xl:pt-[190px]"
+        className="relative z-10 overflow-hidden bg-[url('/images/hero/factory_indoor.png')] bg-cover bg-start pb-16 pt-[100px] md:pb-[100px] md:pt-[130px] xl:pb-[150px] xl:pt-[160px] 2xl:pb-[180px] 2xl:pt-[190px]"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
