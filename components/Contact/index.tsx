@@ -1,8 +1,12 @@
+"use client";
+
+import { useTranslation } from "@/hooks/useTranslation";
 import { MailIcon, PhoneIcon } from "lucide-react";
 
 import Image from "next/image";
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="mb-9 overflow-hidden py-9">
       <div className="container">
@@ -21,8 +25,8 @@ const Contact = () => {
             </div>
             <div className="space-y-2">
               <div>
-                <p>Chat to support</p>
-                <p className="text-sm text-gray-600">{"We're here to help"}</p>
+                <p>{t('contact.chat_to_support')}</p>
+                <p className="text-sm text-gray-600">{t('contact.we_are_here_to_help')}</p>
               </div>
 
               <a
@@ -42,7 +46,7 @@ const Contact = () => {
             </div>
             <div className="space-y-2">
               <div>
-                <p>Call Us</p>
+                <p>{t('contact.call_us')}</p>
                 <p className="text-sm text-gray-600">Available 24/7 </p>
               </div>
 
@@ -60,8 +64,8 @@ const Contact = () => {
             </div>
             <div className="space-y-2">
               <div>
-                <p>Contact to us</p>
-                <p className="text-sm text-gray-600">{"We're here to help"}</p>
+                <p>{t('contact.contact_to_us')}</p>
+                <p className="text-sm text-gray-600">{t('contact.we_are_here_to_help')}</p>
               </div>
 
               <a
@@ -87,8 +91,8 @@ const Contact = () => {
             </div>
             <div className="space-y-2">
               <div>
-                <p>Chat via Facebook</p>
-                <p className="text-sm text-gray-600">{"We're ready to help"}</p>
+                <p>{t('contact.chat_via_facebook')}</p>
+                <p className="text-sm text-gray-600">{t('contact.we_are_here_to_help')}</p>
               </div>
 
               <a

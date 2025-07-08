@@ -1,20 +1,17 @@
+"use client";
+
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
-
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "This is Contact Page",
-  // other metadata
-};
+import { useTranslation } from "@/hooks/useTranslation";
 
 const ContactPage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Breadcrumb
-        pageName="Get in touch"
-        description="If you have any questions or feedback, feel free to reach out using the contact form. We’ll respond as quickly as we can."
+        pageName={t('contact.get_in_touch')}
+        description={t('contact.short_title')}
       />
       <Contact />
     </>

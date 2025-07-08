@@ -61,12 +61,18 @@ const LanguageDropdown: React.FC<IconDropdownProps> = ({
     }
   };
 
+  useEffect(() => {
+    if (value) {
+      setSelectedItem(value);
+    }
+  }, [value]);
+
   return (
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <div>
         <button
           type="button"
-          className="inline-flex w-full items-center justify-between gap-x-1 rounded-lg px-2 py-1 text-sm font-medium text-gray-700 shadow-xs transition-all duration-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2"
+          className="inline-flex w-full items-center justify-between gap-x-1 rounded-lg px-2 py-1 text-sm font-medium text-gray-700 shadow-xs transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-hidden"
           onClick={() => setIsOpen(!isOpen)}
           onKeyDown={handleKeyDown}
           aria-expanded={isOpen}
@@ -91,7 +97,7 @@ const LanguageDropdown: React.FC<IconDropdownProps> = ({
       </div>
 
       {isOpen && (
-        <div className="animate-in fade-in-0 zoom-in-95 absolute right-0 z-10 mt-2 origin-top-right rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 duration-200 focus:outline-hidden">
+        <div className="animate-in fade-in-0 zoom-in-95 ring-opacity-5 absolute right-0 z-10 mt-2 origin-top-right rounded-lg shadow-lg ring-1 ring-black duration-200 focus:outline-hidden">
           <div className="py-1">
             {items.map((item) => (
               <button

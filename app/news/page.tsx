@@ -14,7 +14,7 @@ const NewsPage = () => {
       <NewsHero />
       <Breadcrumb
         pageName={t("navigation.news")}
-        description="Stay updated with our latest news, innovations, and milestones in sustainable insect farming."
+        description={t(`news.short_title`)}
       />
       <section id="news" className="overflow-hidden">
         <div className="container">

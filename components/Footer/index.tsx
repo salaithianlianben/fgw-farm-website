@@ -7,9 +7,12 @@ import {
   UserPlus,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <footer
@@ -17,17 +20,17 @@ const Footer = () => {
         data-wow-delay=".1s"
       >
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            <div className="w-full px-4 col-span-3">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
+            <div className="col-span-3 w-full px-4">
               <div className="mb-12">
                 <Link href="/" className="mb-4 inline-block">
                   <Image
-  src="/images/logo/logo_with_name.png"
-  alt="Company logo"
-  width={300}
-  height={80}
-  className="h-[80px] w-full object-contain"
-/>
+                    src="/images/logo/logo_with_name.png"
+                    alt="Company logo"
+                    width={300}
+                    height={80}
+                    className="h-[80px] w-full object-contain"
+                  />
                 </Link>
                 <div className="mb-9">
                   {/* <p className="text-base leading-relaxed text-body-color dark:text-body-color-dark">
@@ -38,14 +41,7 @@ const Footer = () => {
                     Ho Chi Minh City, Vietnam
                   </p> */}
                   <p className="text-body-color dark:text-body-color-dark text-base leading-relaxed">
-                    FGW FARM CO., LTD is a Vietnamese company specializing in
-                    the farming and processing of Black Soldier Fly (Hermetia
-                    illucens) to create sustainable solutions for agriculture.
-                    Founded in 2022, we transform organic waste into high-value
-                    products like protein-rich animal feed, organic fertilizer,
-                    and bio-compost. With advanced facilities across Vietnam, we
-                    are committed to innovation, environmental responsibility,
-                    and supporting a circular economy.
+                    {t(`footer.short_description`)}
                   </p>
                 </div>
 

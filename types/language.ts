@@ -1,4 +1,4 @@
-export type Language = "en" | "zh";
+export type Language = "en" | "vn";
 
 export interface Translation {
   [key: string]: string | Translation;

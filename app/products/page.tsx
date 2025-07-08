@@ -11,7 +11,7 @@ const ProductsPage = () => {
     <>
       <Breadcrumb
         pageName={t("navigation.products")}
-        description="Explore our range of sustainable, high-quality products made from Black Soldier Fly larvae — including dried larvae, protein powder, ..etc. "
+        description={t('products.short_title')}
       />
       <section id="products" className="overflow-hidden">
         <div className="container space-y-9">

@@ -5,16 +5,18 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 
 import ModalVideo from "react-modal-video";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Your Trusted Partner in Sustainable Nutrition"
-          paragraph="At FGW FARM, we specialize in producing high-quality Black Soldier Fly larvae products—dried, powdered, and essential oils. Our mission is to deliver nutritious, eco-friendly solutions through a customer-first approach and nationwide distribution."
+          title={t(`home.your_trusted_partner_in_sustainable_nutrition`)}
+          paragraph={t(`home.short_about_products_and_info`)}
           center
           mb="80px"
         />

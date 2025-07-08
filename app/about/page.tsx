@@ -1,24 +1,18 @@
+"use client";
+
 import AboutSectionOne from "@/components/About/AboutSectionOne";
-// import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About",
-  description: "This is About Page",
-  // other metadata
-};
+import { useTranslation } from "@/hooks/useTranslation";
 
 const AboutPage = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Breadcrumb
-        pageName="About"
-        description="Pioneering sustainable agriculture through insect farming and innovation."
+        pageName={t(`about.about`)}
+        description={t(`about.short_title`)}
       />
       <AboutSectionOne />
-      {/* <AboutSectionTwo /> */}
     </>
   );
 };

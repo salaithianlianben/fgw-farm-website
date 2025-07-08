@@ -1,14 +1,18 @@
+"use client";
+
 import { Product } from "@/types/product";
 import SectionTitle from "../Common/SectionTitle";
 import ProductItem from "./ProductItem";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const ProductsFeature = ({ data = [] }: { data?: Product[]}) => {
+  const { t } = useTranslation();
     return <>
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Products"
-            paragraph="Explore our range of sustainable, high-quality products made from Black Soldier Fly larvae — including dried larvae, protein powder, .."
+            title={t(`products.products`)}
+            paragraph={t('products.short_title')}
             center
           />
 

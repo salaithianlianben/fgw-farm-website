@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-// import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import Dropdown from "../Ui/LanguageDropdown";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -13,7 +12,6 @@ import { Language } from "@/types/language";
 interface LanguageOption {
   id: string;
   icon: React.ReactNode;
-  // label: string
 }
 
 const languageOptions = [
@@ -28,20 +26,18 @@ const languageOptions = [
       />
     ),
     id: "en",
-    // label: "English"
   },
   {
     icon: (
       <Image
-        src="/images/flags/korea-flag.svg"
-        alt="English"
+        src="/images/flags/vn-flag.png"
+        alt="Vietnam"
         width={24}
         height={20}
         className="h-5 w-6"
       />
     ),
-    id: "zh",
-    // label: "Korean"
+    id: "vn",
   },
 ] as LanguageOption[];
 
@@ -83,6 +79,12 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
+
+  useEffect(()=>{
+    if(currentLanguage){
+      setLocalLanguage(languageOptions.find((l) => l.id === currentLanguage))
+    }
+  },[currentLanguage])
 
   return (
     <>
