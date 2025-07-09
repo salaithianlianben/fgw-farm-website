@@ -1,14 +1,15 @@
 "use client";
 
 import NewsHero from "@/components/NewsHero";
-import { News } from "./StaticTypes";
 import NewsCard from "./components/NewsCard";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { useTranslation } from "@/hooks/useTranslation";
-import { news_data } from "./data";
+import { en_news_data, vn_news_data } from "./data";
 
 const NewsPage = () => {
-  const { t } = useTranslation();
+  const { t, currentLanguage } = useTranslation();
+  const news_data = currentLanguage === "vn" ? vn_news_data : en_news_data;
+  
   return (
     <>
       <NewsHero />

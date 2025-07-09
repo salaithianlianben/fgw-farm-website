@@ -90,7 +90,7 @@ const Footer = () => {
                       href="/"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Home
+                      {t(`navigation.home`)}
                     </a>
                   </li>
                   <li>
@@ -98,7 +98,7 @@ const Footer = () => {
                       href="/products"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      Products
+                      {t(`navigation.products`)}
                     </a>
                   </li>
                   <li>
@@ -106,7 +106,7 @@ const Footer = () => {
                       href="/about"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      About Us
+                      {t(`navigation.about`)}
                     </a>
                   </li>
                 </ul>

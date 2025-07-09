@@ -1,19 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { products_data } from "../data/products";
+import { en_products_data, vn_products_data } from "../data/products";
 import { Product } from "@/types/product";
 import { useParams } from "next/navigation";
 import Image from "next/image";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const ProductDetail = () => {
+  const { currentLanguage } = useTranslation();
+  
+  const products_data = currentLanguage === "en" ? en_products_data : vn_products_data;
+
   const { id } = useParams<{ id: string }>();
   const [productData, setProductData] = useState<Product | undefined>();
   useEffect(() => {
     if (id) {
       setProductData(products_data.find((item) => item.id === Number(id)));
     }
-  }, [id]);
+  }, [id, currentLanguage]);
+  
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">

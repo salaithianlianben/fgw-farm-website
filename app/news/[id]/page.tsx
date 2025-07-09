@@ -2,20 +2,23 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { news_data } from "../data";
+import { en_news_data, vn_news_data } from "../data";
 import { News } from "../StaticTypes";
 import Image from "next/image";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const NewsDetail = () => {
   const { id } = useParams<{ id: string }>();
+  const { currentLanguage } = useTranslation();
   const [newsItem, setNewsItem] = useState<News | undefined>();
+  const news_data = currentLanguage === "vn" ? vn_news_data : en_news_data;
 
   useEffect(() => {
     if (id) {
       const item = news_data.find((news) => news.id === Number(id));
       setNewsItem(item);
     }
-  }, [id]);
+  }, [id, currentLanguage]);
 
   return (
     <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">

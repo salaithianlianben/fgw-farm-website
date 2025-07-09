@@ -2,11 +2,14 @@
 
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { useTranslation } from "@/hooks/useTranslation";
-import { products_data } from "./data/products";
+import { en_products_data, vn_products_data } from "./data/products";
 import ProductItem from "@/components/Products/ProductItem";
 
 const ProductsPage = () => {
-  const { t } = useTranslation();
+  const { t, currentLanguage } = useTranslation();
+
+  const products_data = currentLanguage === "vn" ? vn_products_data : en_products_data;
+  
   return (
     <>
       <Breadcrumb
