@@ -5,7 +5,6 @@ import SectionTitle from "../Common/SectionTitle";
 import ProductItem from "./ProductItem";
 import { useTranslation } from "@/hooks/useTranslation";
 import { en_products_data, vn_products_data } from "@/app/products/data/products";
-import { vn_news_data } from "@/app/news/data";
 
 const ProductsFeature = () => {
   const { t, currentLanguage } = useTranslation();
