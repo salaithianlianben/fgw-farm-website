@@ -42,7 +42,7 @@ const AboutSectionOne = () => {
                     >
                       <div className="relative aspect-77/40 items-center justify-center">
                         <Image
-                          src="/images/video/fgw-farm-video2-thumnail.jpg"
+                          src="/images/video/video1.jpg"
                           alt="video image"
                           fill
                         />
