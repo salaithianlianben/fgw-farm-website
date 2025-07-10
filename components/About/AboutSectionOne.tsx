@@ -82,7 +82,7 @@ const AboutSectionOne = () => {
         autoplay={true}
         start={true}
         isOpen={isOpen}
-        videoId="wrsVSoPU6YE"
+        videoId="FpEpODV-oTI"
         onClose={() => setOpen(false)}
       />
     </section>
