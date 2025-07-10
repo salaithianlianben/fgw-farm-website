@@ -40,7 +40,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden pt-[120px] pb-16 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+      className="relative z-10 overflow-hidden pt-[120px] h-[70vh] min-h-[500px] pb-16 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -101,7 +101,7 @@ const Hero = () => {
               {/* <h1 className="mb-5 text-3xl leading-tight font-bold text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight drop-shadow-lg">
                 블랙 솔저 플라이 사육으로 지구를 살리고, 자원을 순환시킵니다.
               </h1> */}
-              <p className="mb-12 text-base leading-relaxed text-gray-200 sm:text-lg md:text-xl drop-shadow-md">
+              <p className="text-base leading-relaxed text-gray-200 sm:text-lg md:text-xl drop-shadow-md">
                 블랙 솔저 플라이 사육으로 지구를 살리고, 자원을 순환시킵니다.
               </p>
               <p className="mb-12 text-base leading-relaxed text-gray-200 sm:text-lg md:text-xl drop-shadow-md">
