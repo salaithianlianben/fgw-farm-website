@@ -29,7 +29,7 @@ const Video = () => {
             >
               <div className="relative aspect-77/40 items-center justify-center">
                 <Image
-                  src="/images/video/fgm-video-thumbnail.jpg"
+                  src="/images/video/video2.jpg"
                   alt="video image"
                   fill
                 />
@@ -60,7 +60,7 @@ const Video = () => {
         autoplay={true}
         start={true}
         isOpen={isOpen}
-        videoId="bjQ1IizwaDs"
+        videoId="xFq_runkRVQ"
         onClose={() => setOpen(false)}
       />
 
