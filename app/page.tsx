@@ -7,7 +7,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "FGW FARM",
-  description: "This is Home for Startup Nextjs Template",
+  description: "FGW FARM CO., LTD",
 };
 
 export default function Home() {
