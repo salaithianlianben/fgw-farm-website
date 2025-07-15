@@ -15,15 +15,13 @@ export default function Home() {
   return (
     <>
       <ScrollUp /> <Hero image_path="/images/hero/3.jpg" header_name="Products"/>
+      <ProductsFeature />
       <AreaUses />
-      {/* <ProductsFeature /> */}
+      
       {/* <Video /> */}
       {/* <Brands /> */}
       {/* <AboutSectionOne /> */}
       {/* <AboutSectionTwo /> */}
-      {/* <Testimonials />
-      <Pricing />
-      <Blog /> */}
       {/* <Contact /> */}
     </>
   );

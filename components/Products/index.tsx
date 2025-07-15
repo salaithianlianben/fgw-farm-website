@@ -11,7 +11,7 @@ const ProductsFeature = () => {
   const data = currentLanguage === "en" ? en_products_data : vn_products_data;
 
     return <>
-      <section id="features" className="py-16 md:py-20 lg:py-28">
+      <section id="features" className="py-16 md:py-15 lg:py-20">
         <div className="container">
           <SectionTitle
             title={t(`products.products`)}
@@ -19,9 +19,9 @@ const ProductsFeature = () => {
             center
           />
 
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((feature) => (
-              <ProductItem key={feature.id} product={feature} />
+          <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-3 lg:grid-cols-3">
+            {data.map((feature,idx) => (
+              <ProductItem key={feature.id} index={idx} product={feature} />
             ))}
           </div>
         </div>
