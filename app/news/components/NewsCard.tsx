@@ -48,7 +48,7 @@ const NewsCard = ({ news, index }: NewsCardProps) => {
           alt={news.title || "News article"}
           width={800}
           height={400}
-          className="h-[200px] w-full rounded-sm"
+          className="h-[200px] w-full rounded-sm transition-transform duration-300 hover:scale-105"
         />
         <div className="space-y-2 px-4 py-3">
           <p className="text-center text-lg">{news.title}</p>
