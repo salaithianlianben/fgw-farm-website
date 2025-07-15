@@ -3,42 +3,62 @@
 import { useRouter } from "next/navigation";
 import { News } from "../StaticTypes";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface NewsCardProps {
   news: News;
+  index: number;
 }
 
-const NewsCard = ({ news }: NewsCardProps) => {
+const NewsCard = ({ news, index }: NewsCardProps) => {
   const router = useRouter();
 
+  // Animation variants
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      x: index % 2 === 0 ? -100 : 100, // Even indices from left, odd from right
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
   return (
-    <div className="flex h-full w-full cursor-pointer flex-col justify-between space-y-3 rounded-lg shadow-sm">
-      <div>
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      animate="visible"
+      transition={{
+        duration: 0.6,
+        delay: index * 0.2,
+        ease: "easeOut",
+      }}
+      whileHover={{ 
+        scale: 1.02,
+        transition: { duration: 0.2 }
+      }}
+      className="flex h-full w-full cursor-pointer flex-col justify-between space-y-3"
+      onClick={() => router.push(`/news/${news.id}`)}
+    >
+      <div className="flex flex-row">
         <Image
           src={news.img_url}
           alt={news.title || "News article"}
           width={800}
           height={400}
-          className="h-[400px] w-full rounded-sm"
+          className="h-[200px] w-full rounded-sm"
         />
         <div className="space-y-2 px-4 py-3">
           <p className="text-center text-lg">{news.title}</p>
-          <p className="line-clamp-7 text-center text-sm whitespace-pre-line">
+          <p className="line-clamp-5 text-center text-sm whitespace-pre-line">
             {news.content}
           </p>
+          <p className="text-end text-sm text-gray-400">{news.date}</p>
         </div>
       </div>
-
-      <div className="flex w-full items-center justify-between border-t p-1 px-2">
-        <p className="text-sm text-gray-400">{news.date}</p>
-        <button
-          className="flex space-x-1 text-blue-500 hover:text-blue-500"
-          onClick={() => router.push(`/news/${news.id}`)}
-        >
-          <p className="text-sm">{"Read More >>"}</p>
-        </button>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

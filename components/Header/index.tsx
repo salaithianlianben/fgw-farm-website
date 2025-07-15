@@ -80,52 +80,51 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
-  useEffect(()=>{
-    if(currentLanguage){
-      setLocalLanguage(languageOptions.find((l) => l.id === currentLanguage))
+  useEffect(() => {
+    if (currentLanguage) {
+      setLocalLanguage(languageOptions.find((l) => l.id === currentLanguage));
     }
-  },[currentLanguage])
+  }, [currentLanguage]);
 
   return (
     <>
       <header
-        className={`header top-0 left-0 z-40 flex w-full items-center ${
+        className={`header top-0 left-0 z-40 flex h-[80px] w-full items-center ${
           sticky
             ? "!bg-opacity-80 shadow-sticky dark:bg-gray-dark dark:shadow-sticky-dark fixed z-9999 bg-white backdrop-blur-xs transition"
             : "absolute bg-transparent"
         }`}
+        onMouseEnter={() => setSticky(true)}
+        onMouseLeave={() => setSticky(false)}
       >
-        <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
+        <div className="h-full w-full">
+          <div className="relative flex h-full items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
-                href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
-              >
+              <Link href="/" className={`header-logo block w-full`}>
                 {/* logo_farm_white_text.png */}
-                {!sticky && (usePathName === "/" || usePathName === "/news") ? (
-                  <Image
-                    src="/images/logo/logo_farm_white_text.png"
-                    alt="logo"
-                    width={140}
-                    height={30}
-                    className="w-full"
-                  />
+                {!sticky ? (
+                  <div className="h-[50px] w-[100px]">
+                    <Image
+                      src="/images/logo/logo.png"
+                      alt="logo"
+                      width={140}
+                      height={20}
+                      className="w-full"
+                    />
+                  </div>
                 ) : (
                   <Image
                     src="/images/logo/logo_with_name.png"
                     alt="logo"
                     width={140}
-                    height={30}
+                    height={20}
                     className="w-full"
                   />
                 )}
               </Link>
             </div>
-            <div className="flex w-full items-center justify-end space-x-8">
-              <div>
+            <div className="flex h-full w-full items-center justify-center space-x-8">
+              <div className="h-full">
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -150,21 +149,22 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
+                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 h-full w-[250px] rounded border-[.5px] bg-white px-6 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-12">
+                  <ul className="block h-full lg:flex">
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`hover:text-primary flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-                              usePathName === menuItem.path && "text-primary"
-                            } ${((usePathName === "/" && menuItem.title !== "home") || (usePathName === "/news" && menuItem.title !== "news")) && !sticky ? "text-white" : ""}`}
+                            className={`hover:text-primary hover:border-b-primary flex h-full w-[150px] items-center justify-center text-base text-[18px] hover:border-b hover:border-b-2 lg:mr-0 lg:inline-flex lg:px-0 ${
+                              usePathName === menuItem.path &&
+                              "text-primary border-b-2"
+                            } ${!sticky ? "text-white border-b-white" : ""}`}
                           >
                             {t(`navigation.${menuItem.title}`)}
                           </Link>
@@ -211,11 +211,11 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <div>
                   {/* <ThemeToggler /> */}
-                  <Dropdown
+                  {/* <Dropdown
                     items={languageOptions}
                     value={localLanguage}
                     onSelectValue={handleChangeLanguage}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>

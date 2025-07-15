@@ -21,7 +21,9 @@ export const translations: Translations = {
       contact: 'Contact',
       profile: 'Profile',
       news: 'News',
-      products: 'Products'
+      products: 'Products',
+      technology: 'Technology',
+      impact: 'Impact'
     },
     contact: {
       contact: 'Contact',
@@ -73,7 +75,9 @@ export const translations: Translations = {
       contact: 'Thông tin liên hệ',
       profile: '个人资料',
       news: 'Thông tin',
-      products: 'Sản phẩm'
+      products: 'Sản phẩm',
+      technolog: 'Technology',
+      impact: 'Impact'
     },
     contact: {
       contact: 'Thông tin liên hệ',
