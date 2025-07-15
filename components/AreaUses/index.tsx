@@ -61,7 +61,7 @@ const AreaUses = () => {
   };
 
   return (
-    <section id="areauses" className="py-16 md:py-20 lg:py-28">
+    <section id="areauses" className="py-10 md:py-20 lg:py-20 bg-gray-100">
       <div className="container space-y-8">
         <div className="flex flex-col items-center space-y-6">
           <div className="space-y-3">
