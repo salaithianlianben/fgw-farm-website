@@ -11,7 +11,7 @@ interface ProductItemProps {
 }
 
 const ProductItem = ({ product, index }: ProductItemProps) => {
-  const { image_url, type, id } = product;
+  const { image_url, name, type, id } = product;
   const router = useRouter();
 
   // Animation variants for the container
@@ -105,7 +105,7 @@ const ProductItem = ({ product, index }: ProductItemProps) => {
         className="flex absolute top-5 left-5"
       >
         <div className="bg-primary rounded-full px-3 py-1 text-white">
-          <p>{type}</p>
+          <p>{name}</p>
         </div>
       </motion.div>
     </motion.div>
