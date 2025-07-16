@@ -86,6 +86,21 @@ const Header = () => {
     }
   }, [currentLanguage]);
 
+  const isPathInMenu = menuData.some(
+    (menuItem) => menuItem.path === usePathName,
+  );
+
+  const isActiveRoute = (menuPath) => {
+    if (!menuPath) return false;
+
+    // Exact match
+    if (usePathName === menuPath) return true;
+
+    // Check if current path starts with menu path (for child routes)
+    // e.g., /products/3 should match /products
+    return usePathName.startsWith(menuPath + "/");
+  };
+
   return (
     <>
       <header
@@ -93,7 +108,7 @@ const Header = () => {
           sticky
             ? "!bg-opacity-80 shadow-sticky dark:bg-gray-dark dark:shadow-sticky-dark fixed z-9999 bg-white backdrop-blur-xs transition"
             : "absolute bg-transparent"
-        }`}
+        } ${!sticky && isPathInMenu ? "" : "border-b"}`}
         onMouseEnter={() => setSticky(true)}
         onMouseLeave={() => setSticky(false)}
       >
@@ -103,15 +118,27 @@ const Header = () => {
               <Link href="/" className={`header-logo block w-full`}>
                 {/* logo_farm_white_text.png */}
                 {!sticky ? (
-                  <div className="h-[50px] w-[100px]">
-                    <Image
-                      src="/images/logo/logo.png"
-                      alt="logo"
-                      width={140}
-                      height={20}
-                      className="w-full"
-                    />
-                  </div>
+                  !sticky && !isPathInMenu ? (
+                    <div className="h-[50px] w-[100px]">
+                      <Image
+                        src="/images/logo/logo-xanh.png"
+                        alt="logo"
+                        width={140}
+                        height={20}
+                        className="w-full"
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-[50px] w-[100px]">
+                      <Image
+                        src="/images/logo/logo.png"
+                        alt="logo"
+                        width={140}
+                        height={20}
+                        className="w-full"
+                      />
+                    </div>
+                  )
                 ) : (
                   <Image
                     src="/images/logo/logo_with_name.png"
@@ -164,7 +191,7 @@ const Header = () => {
                             className={`hover:text-primary hover:border-b-primary flex h-full w-[150px] items-center justify-center text-base text-[18px] hover:border-b hover:border-b-2 lg:mr-0 lg:inline-flex lg:px-0 ${
                               usePathName === menuItem.path &&
                               "text-primary border-b-2"
-                            } ${!sticky ? "text-white border-b-white" : ""}`}
+                            } ${!sticky && isPathInMenu ? "border-b-white text-white" : ""}`}
                           >
                             {t(`navigation.${menuItem.title}`)}
                           </Link>
