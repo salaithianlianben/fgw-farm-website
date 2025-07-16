@@ -155,11 +155,14 @@ const Hero = ({ image_path, content = "Sustainable insect protein", }: HeroProps
         <div className="flex flex-wrap">
           <div className="flex w-full flex-row justify-start px-4">
             <div
-              className="wow fadeInUp max-w-[800px] text-center"
+              className="wow fadeInUp text-center"
               data-wow-delay=".2s"
             >
-              <h1 className="mb-5 w-[500px] text-start text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight md:text-6xl md:leading-tight">
-                {content}
+              <h1 className="mb-5 text-start text-xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight md:text-4xl md:leading-tight">
+                {"블랙 솔저 플라이 사육으로 지구를 살리고, 자원을 순환시킵니다"}
+              </h1>
+              <h1 className="mb-5 text-start text-xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight md:text-4xl md:leading-tight">
+                {"지속 가능한 미래, 곤충에서 시작됩니다."}
               </h1>
             </div>
           </div>
