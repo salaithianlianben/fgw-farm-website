@@ -52,7 +52,8 @@ export const translations: Translations = {
       apply: 'Apply',
       short_apply: 'As the natural balanced animal protein and fat, insect is a great supplement to increase body and immune system. ',
       poultry: 'Poultry',
-      aquaculture: 'Aquaculture'
+      aquaculture: 'Aquaculture',
+      reptile_farming: 'Reptile farming'
     },
     about:{
       about: 'About',
@@ -83,7 +84,7 @@ export const translations: Translations = {
       news: 'Thông tin',
       products: 'Sản phẩm',
       technology: 'Công nghệ',
-      impact: 'Impact'
+      impact: 'Sự va chạm'
     },
     contact: {
       contact: 'Thông tin liên hệ',
@@ -119,6 +120,7 @@ export const translations: Translations = {
       short_apply: 'Các sản phẩm từ Ấu trùng Ruồi lính đen là nguồn Protein và Chất Béo động vật cân bằng tự nhiên, một sự bổ sung tuyệt vời giúp tăng cường sức khỏe và hệ miễn dịch cho gia cầm, cá, bò sát, ...',
       poultry: 'Gia cầm',
       aquaculture: 'Nuôi trồng thủy sản',
+      reptile_farming: 'Nuôi bò sát'
     }
   }
 };

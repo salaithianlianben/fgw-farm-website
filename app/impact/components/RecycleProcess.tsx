@@ -148,7 +148,7 @@ const RecycleProcess = () => {
       iconRotation: "-rotate-20",
       iconPosition: "absolute right-8 md:right-10 bottom-5 md:bottom-7",
       titlePosition: "absolute right-8 md:right-10 top-16 md:top-20",
-      titleWidth: "w-[80px] md:w-[100px]",
+      titleWidth: "w-[80px] md:w-[140px]",
       decorativeElement: "absolute right-0 bottom-0 h-[50px] w-[70px] md:h-[60px] md:w-[80px] rounded-tl-full border-t-4 md:border-t-8 border-l-4 md:border-l-8 border-white bg-transparent"
     },
     {
@@ -172,7 +172,7 @@ const RecycleProcess = () => {
       iconRotation: "rotate-30",
       iconPosition: "absolute bottom-5 md:bottom-7 left-8 md:left-10",
       titlePosition: "absolute bottom-12 md:bottom-15 left-20 md:left-25",
-      titleWidth: "w-[80px] md:w-[100px]",
+      titleWidth: "w-[80px] md:w-[200px]",
       decorativeElement: "absolute bottom-0 left-0 h-[50px] w-[70px] md:h-[60px] md:w-[80px] rounded-tr-full border-t-4 md:border-t-8 border-r-4 md:border-r-8 border-white bg-transparent"
     },
     {
@@ -208,7 +208,7 @@ const RecycleProcess = () => {
       iconRotation: "-rotate-20",
       iconPosition: "absolute top-5 md:top-7 left-8 md:left-10",
       titlePosition: "absolute top-12 md:top-15 left-16 md:left-18",
-      titleWidth: "w-[80px] md:w-[100px]",
+      titleWidth: "w-[80px] md:w-[200px]",
       decorativeElement: "absolute top-0 left-0 h-[50px] w-[70px] md:h-[60px] md:w-[80px] rounded-br-full border-r-4 md:border-r-8 border-b-4 md:border-b-8 border-white bg-transparent"
     }
   ];

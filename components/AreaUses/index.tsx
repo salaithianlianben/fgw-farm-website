@@ -116,7 +116,7 @@ const AreaUses = () => {
             </div>
             <div className="flex flex-row items-center justify-start space-x-2">
               <SquareChevronRight className="h-6 w-6" />
-              <p className="text-xl">양계</p>
+              <p className="text-xl">{t('products.aquaculture')}</p>
             </div>
           </motion.div>
           
@@ -134,7 +134,7 @@ const AreaUses = () => {
             </div>
             <div className="flex flex-row items-center justify-start space-x-2">
               <SquareChevronRight className="h-6 w-6" />
-              <p className="text-xl">양계</p>
+              <p className="text-xl">{t('products.reptile_farming')}</p>
             </div>
           </motion.div>
         </motion.div>
