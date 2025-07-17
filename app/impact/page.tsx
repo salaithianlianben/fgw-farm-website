@@ -1,7 +1,12 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
-import { recycle_process_data } from "./data";
 import RecycleProcess from "./components/RecycleProcess";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Impact",
+  description: "FGW FARM CO., LTD"
+};
 
 const ImpactPage = () => {
   return (

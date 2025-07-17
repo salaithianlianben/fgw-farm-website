@@ -159,30 +159,38 @@ const Header = () => {
                   className="ring-primary absolute top-1/2 right-4 block translate-y-[-50%] rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden"
                 >
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "top-[7px] rotate-45" : " "
-                    }`}
+                    } ${sticky ? "bg-black" : "bg-white"}`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "opacity-0" : " "
-                    }`}
+                    } ${sticky ? "bg-black" : "bg-white"}`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "top-[-8px] -rotate-45" : " "
-                    }`}
+                    } ${sticky ? "bg-black" : "bg-white"}`}
                   />
                 </button>
+                <div className="absolute top-6 right-20 sm:block lg:hidden">
+                  <Dropdown
+                    items={languageOptions}
+                    value={localLanguage}
+                    onSelectValue={handleChangeLanguage}
+                  />
+                </div>
+
                 <nav
                   id="navbarCollapse"
-                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 h-full w-[250px] rounded border-[.5px] bg-white px-6 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
+                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
-                      : "invisible top-[120%] opacity-0"
+                      : "invisible top-[120%] h-full opacity-0"
                   }`}
                 >
-                  <ul className="block h-full lg:flex">
+                  <ul className={`block h-full lg:flex`}>
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
@@ -191,7 +199,7 @@ const Header = () => {
                             className={`hover:text-primary hover:border-b-primary flex h-full w-[150px] items-center justify-center text-base text-[18px] hover:border-b hover:border-b-2 lg:mr-0 lg:inline-flex lg:px-0 ${
                               usePathName === menuItem.path &&
                               "text-primary border-b-2"
-                            } ${!sticky && isPathInMenu ? "border-b-white text-white" : ""}`}
+                            } ${!sticky && isPathInMenu ? "border-b-white text-white" : ""} ${navbarOpen ? "py-5" : ""}`}
                           >
                             {t(`navigation.${menuItem.title}`)}
                           </Link>
@@ -235,14 +243,13 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
+              <div className="flex hidden items-center justify-end pr-5 lg:block lg:pr-0">
                 <div>
-                  {/* <ThemeToggler /> */}
-                  {/* <Dropdown
+                  <Dropdown
                     items={languageOptions}
                     value={localLanguage}
                     onSelectValue={handleChangeLanguage}
-                  /> */}
+                  />
                 </div>
               </div>
             </div>

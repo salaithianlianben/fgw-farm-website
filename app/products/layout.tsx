@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Products",
-  description: "This is Products Page for",
+  description: "FGW FARM CO., LTD"
 };
 
 export default function ProductsLayout({

@@ -2,6 +2,12 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
 import { steps_of_production } from "./data";
 import StepItem from "./components/StepItem";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Technology",
+  description: "FGW FARM CO., LTD"
+};
 
 const TechnologyPage = () => {
   return (
