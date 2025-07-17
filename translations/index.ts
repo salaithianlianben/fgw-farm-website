@@ -48,11 +48,17 @@ export const translations: Translations = {
     },
     products: {
       products: 'Products',
-      short_title: 'Explore our range of sustainable, high-quality products made from Black Soldier Fly larvae — including dried larvae, protein powder, ..etc.'
+      short_title: 'Explore our range of sustainable, high-quality products made from Black Soldier Fly larvae — including dried larvae, protein powder, ..etc.',
+      apply: 'Apply',
+      short_apply: 'As the natural balanced animal protein and fat, insect is a great supplement to increase body and immune system. ',
+      poultry: 'Poultry',
+      aquaculture: 'Aquaculture'
     },
     about:{
       about: 'About',
-      short_title: "Pioneering sustainable agriculture through insect farming and innovation."
+      farm_history: "FARM'S HISTORY",
+      short_title: "Pioneering sustainable agriculture through insect farming and innovation.",
+      about_detail: "Founded in 2022, FGW FARM CO.,LTD is a leading Vietnamese enterprise specializing in the farming and processing of Black Soldier Fly (Hermetia illucens) to promote sustainable agriculture and circular economy solutions. With a strong commitment to innovation, environmental responsibility, and food security, we transform organic waste into high-value products such as protein-rich animal feed, organic fertilizer, and bio-compost. Our company always sets the motto “customer-centered”, and the mission of bringing quality, nutritious products to consumers."
     }
   },
   vn: {
@@ -76,7 +82,7 @@ export const translations: Translations = {
       profile: '个人资料',
       news: 'Thông tin',
       products: 'Sản phẩm',
-      technolog: 'Technology',
+      technology: 'Công nghệ',
       impact: 'Impact'
     },
     contact: {
@@ -95,7 +101,9 @@ export const translations: Translations = {
     },
     about: {
       about: 'Về chúng tôi',
-      short_title: 'Tiên phong trong nông nghiệp bền vững thông qua nuôi côn trùng và đổi mới.'
+      farm_history: 'LỊCH SỬ TRANG TRẠI',
+      short_title: 'Tiên phong trong nông nghiệp bền vững thông qua nuôi côn trùng và đổi mới.',
+      about_detail: 'Được thành lập vào năm 2022, CÔNG TY TNHH FGW FARM là doanh nghiệp hàng đầu Việt Nam chuyên nuôi và chế biến Ruồi Lính Đen (Hermetia illucens) nhằm thúc đẩy nông nghiệp bền vững và các giải pháp kinh tế tuần hoàn. Với cam kết mạnh mẽ về đổi mới, trách nhiệm với môi trường và an ninh lương thực, chúng tôi chuyển đổi chất thải hữu cơ thành các sản phẩm có giá trị cao như thức ăn chăn nuôi giàu protein, phân bón hữu cơ và phân hữu cơ sinh học. Công ty chúng tôi luôn đặt phương châm “lấy khách hàng làm trung tâm” và sứ mệnh mang đến những sản phẩm chất lượng, bổ dưỡng cho người tiêu dùng.',
     },
     home: {
       your_trusted_partner_in_sustainable_nutrition: 'Đối tác đáng tin cậy của bạn trong dinh dưỡng bền vững',
@@ -106,7 +114,11 @@ export const translations: Translations = {
     },
     products: {
       products: 'Sản phẩm',
-      short_title: 'Khám phá danh mục các sản phẩm bền vững, chất lượng cao được làm từ ấu trùng ruồi lính đen — bao gồm ấu trùng khô, bột protein, ..v.v.'
+      short_title: 'Khám phá danh mục các sản phẩm bền vững, chất lượng cao được làm từ ấu trùng ruồi lính đen — bao gồm ấu trùng khô, bột protein, ..v.v.',
+      apply: 'Áp dụng cho',
+      short_apply: 'Các sản phẩm từ Ấu trùng Ruồi lính đen là nguồn Protein và Chất Béo động vật cân bằng tự nhiên, một sự bổ sung tuyệt vời giúp tăng cường sức khỏe và hệ miễn dịch cho gia cầm, cá, bò sát, ...',
+      poultry: 'Gia cầm',
+      aquaculture: 'Nuôi trồng thủy sản',
     }
   }
 };

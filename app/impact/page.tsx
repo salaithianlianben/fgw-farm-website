@@ -1,14 +1,33 @@
+"use client";
+
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
 import RecycleProcess from "./components/RecycleProcess";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Impact",
-  description: "FGW FARM CO., LTD",
-};
+import { useTranslation } from "@/hooks/useTranslation";
+import {
+  en_extra_steps,
+  en_recycling_process,
+  vn_extra_steps,
+  vn_recycling_process,
+} from "./data";
 
 const ImpactPage = () => {
+  const { currentLanguage } = useTranslation();
+
+  const recycling_process =
+    currentLanguage === "en"
+      ? en_recycling_process
+      : currentLanguage === "vn"
+        ? vn_recycling_process
+        : en_recycling_process;
+
+  const extra_steps_ =
+    currentLanguage === "en"
+      ? en_extra_steps
+      : currentLanguage === "vn"
+        ? vn_extra_steps
+        : en_extra_steps;
+
   return (
     <>
       <ScrollUp />
@@ -20,40 +39,23 @@ const ImpactPage = () => {
             <RecycleProcess />
             {/* </div> */}
             <div className="py-3">
-              <h1 className="text-2xl">Zero-waste recycling</h1>
-              <p>
-                남은 음식물을 재활용하는 과정에서 음식물폐수를 배출하지 않고
-                음식물 100%를 곤충 단백질로 바이오컨버전 합니다.
-              </p>
+              <h1 className="text-2xl">{recycling_process.title}</h1>
+              <p>{recycling_process.content}</p>
             </div>
           </div>
-          <div>
-            <img
-              src="/images/impact/Alternative protein & oil.jpg"
-              alt="Alternative protein and oil"
-              className="h-auto max-h-[400px] w-full object-cover"
-            />
-            <div className="py-3">
-              <h1 className="text-2xl">Alternative protein & oil</h1>
-              <p>
-                사료용으로 사용되는 어린 생선을 대체할 수 있는 곤충 단백질을
-                공급하여 해양자원 및 환경을 보전합니다.
-              </p>
+          {extra_steps_.map((s, idx) => (
+            <div key={idx}>
+              <img
+                src="/images/impact/Alternative protein & oil.jpg"
+                alt="Alternative protein and oil"
+                className="h-auto max-h-[400px] w-full object-cover"
+              />
+              <div className="py-3">
+                <h1 className="text-2xl">{s.title}</h1>
+                <p>{s.content}</p>
+              </div>
             </div>
-          </div>
-          <div>
-            <img
-              src={"/images/impact/Alternative protein & oil 2.jpg"}
-              className="h-auto max-h-[400px] w-full object-cover"
-            />
-            <div className="py-3">
-              <h1 className="text-2xl">Alternative protein & oil</h1>
-              <p>
-                사료용 곡물, 팜 오일 대체할 수 있는 곤충단백질과 오일을 공급하여
-                사막화와 생물다양성 손실을 방지합니다.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </>

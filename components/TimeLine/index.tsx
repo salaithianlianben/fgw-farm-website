@@ -1,8 +1,12 @@
+"use effect";
+
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Timeline = () => {
-  const timelineData = [
+  const { currentLanguage } = useTranslation();
+  const en_timelineData = [
     {
       year: "2025",
       items: ["Export products to Korea"],
@@ -23,6 +27,35 @@ const Timeline = () => {
       ],
     },
   ];
+
+  const vn_timelineData = [
+    {
+      year: "2025",
+      items: ["Xuất khẩu sang Hàn Quốc"],
+    },
+    {
+      year: "2024",
+      items: ["Bắt đầu hoạt động nhà máy tại tỉnh Bình Dương"],
+    },
+    {
+      year: "2023",
+      items: ["Là nhà bán lẻ hàng đầu tại Việt Nam"],
+    },
+    {
+      year: "2022",
+      items: [
+        "Thành lập Công ty TNHH FGW FARM",
+        "Bắt đầu hoạt động 2 nhà máy tại tỉnh Tây ninh và Củ Chi, Thành phố Hồ chí minh",
+      ],
+    },
+  ];
+
+  const timelineData =
+    currentLanguage === "en"
+      ? en_timelineData
+      : currentLanguage === "vn"
+        ? vn_timelineData
+        : en_timelineData;
 
   // Animation variants for the timeline line
   const lineVariants = {
@@ -135,7 +168,7 @@ const Timeline = () => {
                     scale: 1.5,
                     transition: { duration: 0.2 },
                   }}
-                  className="bg-primary absolute top-2 left-1/2 h-3 w-3 -translate-x-1/2 transform rounded-full cursor-pointer"
+                  className="bg-primary absolute top-2 left-1/2 h-3 w-3 -translate-x-1/2 transform cursor-pointer rounded-full"
                 />
 
                 <div className={`w-1/2 ${isEven ? "pr-8" : "ml-auto pl-8"}`}>
@@ -156,7 +189,7 @@ const Timeline = () => {
                       {yearData.year}
                     </span>
                   </motion.div>
-                  
+
                   {/* Animated items */}
                   {yearData.items.map((item, itemIndex) => (
                     <motion.div

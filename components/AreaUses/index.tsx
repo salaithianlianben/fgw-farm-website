@@ -4,9 +4,11 @@ import { SquareChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const AreaUses = () => {
   const ref = useRef(null);
+  const { t } = useTranslation();
   const isInView = useInView(ref, { 
     once: true, 
     margin: "-100px" 
@@ -65,14 +67,13 @@ const AreaUses = () => {
       <div className="container space-y-8">
         <div className="flex flex-col items-center space-y-6">
           <div className="space-y-3">
-            <h1 className="text-3xl">사용분야</h1>
+            <h1 className="text-3xl">{t('products.apply')}</h1>
             <div className="flex w-full items-center justify-center">
                 <div className="w-[50px] h-[2px] bg-black" />
             </div>
           </div>
-          <p>
-            자연적인 밸러스의 동물성 단백질, 지방으로 증체 및 면연력증강용
-            보조사료로 사용됩니다.
+          <p className="text-center w-[90%] lg:w-[70%] ">
+           {t('products.short_apply')}
           </p>
         </div>
         
@@ -97,7 +98,7 @@ const AreaUses = () => {
             </div>
             <div className="flex flex-row items-center justify-start space-x-2">
               <SquareChevronRight className="h-6 w-6" />
-              <p className="text-xl">양계</p>
+              <p className="text-xl">{t('products.poultry')}</p>
             </div>
           </motion.div>
           
