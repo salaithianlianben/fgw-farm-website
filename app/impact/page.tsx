@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Impact",
-  description: "FGW FARM CO., LTD"
+  description: "FGW FARM CO., LTD",
 };
 
 const ImpactPage = () => {
@@ -17,7 +17,7 @@ const ImpactPage = () => {
         <div className="container space-y-8 py-20">
           <div>
             {/* <div className="grid grid-cols-3 gap-2"> */}
-              <RecycleProcess />
+            <RecycleProcess />
             {/* </div> */}
             <div className="py-3">
               <h1 className="text-2xl">Zero-waste recycling</h1>
@@ -29,8 +29,9 @@ const ImpactPage = () => {
           </div>
           <div>
             <img
-              src={"/images/impact/Alternative protein & oil.jpg"}
-              className="object-fit h-[400px] w-full"
+              src="/images/impact/Alternative protein & oil.jpg"
+              alt="Alternative protein and oil"
+              className="h-auto max-h-[400px] w-full object-cover"
             />
             <div className="py-3">
               <h1 className="text-2xl">Alternative protein & oil</h1>
@@ -43,7 +44,7 @@ const ImpactPage = () => {
           <div>
             <img
               src={"/images/impact/Alternative protein & oil 2.jpg"}
-              className="object-fit h-[400px] w-full"
+              className="h-auto max-h-[400px] w-full object-cover"
             />
             <div className="py-3">
               <h1 className="text-2xl">Alternative protein & oil</h1>
