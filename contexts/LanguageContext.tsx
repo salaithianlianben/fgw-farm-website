@@ -16,6 +16,7 @@ const DEFAULT_LANGUAGE: Language = "en";
 const availableLanguages = [
   { code: "en" as Language, name: "English", flag: "🇺🇸" },
   { code: "vn" as Language, name: "中文", flag: "🇨🇳" },
+  { code: "kr" as Language, name: "한국어", flag: "🇰🇷" },
 ];
 
 const LanguageContext = createContext<LanguageContextType | undefined>(

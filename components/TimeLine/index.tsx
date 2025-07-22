@@ -50,12 +50,34 @@ const Timeline = () => {
     },
   ];
 
+  const kr_timelineData = [
+    {
+      year: "2025",
+      items: ["한국 수출"],
+    },
+    {
+      year: "2024",
+      items: ["빈즈엉성에서 공장 운영 개시"],
+    },
+    {
+      year: "2023",
+      items: ["베트남 내 대표 소매업체로 성장"],
+    },
+    {
+      year: "2022",
+      items: [
+        "FGW FARM 유한책임회사 설립",
+        "떠이닌성과 호찌민시 꾸찌 지역에서 2개 공장 운영 개시",
+      ],
+    },
+  ];
+
   const timelineData =
     currentLanguage === "en"
       ? en_timelineData
       : currentLanguage === "vn"
         ? vn_timelineData
-        : en_timelineData;
+        : kr_timelineData;
 
   // Animation variants for the timeline line
   const lineVariants = {

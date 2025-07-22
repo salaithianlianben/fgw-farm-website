@@ -122,5 +122,54 @@ export const translations: Translations = {
       aquaculture: 'Nuôi trồng thủy sản',
       reptile_farming: 'Nuôi bò sát'
     }
+  },
+  kr: {
+    navigation: {
+      home: '홈페이지',
+      about: '회사 소개',
+      services: 'Services',
+      contact: '연락처',
+      profile: 'Profile',
+      news: '정보',
+      products: '상품',
+      technology: '산업',
+      impact: '영향'
+    },
+    contact: {
+      contact: '연락처',
+      get_in_touch: '연락처 정보',
+      short_title: '질문이나 의견이 있으신 경우 아래 문의 양식을 통해 연락해 주세요. 최대한 빠르게 답변드리겠습니다.',
+      chat_to_support: '바로 상담하기',
+      we_are_here_to_help: "도움을 드리기 위해 여기 있습니다",
+      call_us: '전화 상담',
+      contact_to_us: '연락해 주세요',
+      chat_via_facebook: '페이스북으로 문의하세요.',
+    },
+    news: {
+      news: '정보',
+      short_title: '지속 가능한 곤충 사육 분야의 최신 소식과 혁신을 만나보세요.'
+    },
+    home: {
+      your_trusted_partner_in_sustainable_nutrition: 'Your Trusted Partner in Sustainable Nutrition',
+      short_about_products_and_info: 'At FGW FARM, we specialize in producing high-quality Black Soldier Fly larvae products—dried, powdered, and essential oils. Our mission is to deliver nutritious, eco-friendly solutions through a customer-first approach and nationwide distribution.'
+    },
+    footer: {
+      short_description: 'FGW FARM 유한책임회사는 베트남에 위치한 블랙 솔저 플라이 양식 및 가공 전문 기업으로, 지속 가능한 농업 솔루션을 제공합니다. 2022년에 설립된 저희 회사는 유기성 폐기물을 블랙 솔저 플라이를 통해 고단백 사료, 유기 비료, 바이오 유기 비료 등 고부가가치 제품으로 전환하고 있습니다. 베트남 전역에 걸쳐 첨단 시설을 갖춘 FGW FARM은 환경에 대한 책임, 혁신, 그리고 순환 경제를 위한 노력을 약속드립니다.'
+    },
+    products: {
+      products: '상품',
+      short_title: '블랙 솔져 플라이 유충으로 만든 지속 가능하고 고품질의 다양한 제품군을 만나보세요 — 건조 유충, 단백질 분말 등 다양한 형태로 제공됩니다.',
+      apply: '적용',
+      short_apply: '블랙 솔저 플라이 유충 제품은 자연적으로 균형 잡힌 동물성 단백질과 지방의 공급원으로, 가금류, 어류, 파충류 등의 건강과 면역력을 강화하는 데 탁월한 보충제입니다.',
+      poultry: '가금류',
+      aquaculture: '수산 양식',
+      reptile_farming: '파충류 키우기'
+    },
+    about:{
+      about: '회사 소개',
+      farm_history: "FARM'S HISTORY",
+      short_title: "곤충 사육과 혁신을 통해 지속 가능한 농업을 선도합니다.",
+      about_detail: "2022년에 설립된 FGW FARM 유한책임회사는 지속 가능한 농업과 순환 경제 솔루션을 촉진하기 위해 블랙 솔저 플라이(Hermetia illucens)의 사육 및 가공을 전문으로 하는 베트남의 선도적인 기업입니다.당사는 혁신, 환경 책임, 식량 안보에 대한 강한 의지를 바탕으로 유기성 폐기물을 고단백 사료, 유기 비료, 바이오 유기 비료 등 고부가가치 제품으로 전환하고 있습니다. FGW FARM은 고객 중심의 철학을 실천하며 소비자에게 건강하고 영양가 높은 고품질 제품을 제공하는 것을 사명으로 삼고 있습니다."
+    }
   }
 };

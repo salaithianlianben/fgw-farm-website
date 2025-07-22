@@ -3,12 +3,12 @@
 import NewsCard from "./components/NewsCard";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { useTranslation } from "@/hooks/useTranslation";
-import { en_news_data, vn_news_data } from "./data";
+import { en_news_data, kr_news_data, vn_news_data } from "./data";
 import Hero from "@/components/Hero";
 
 const NewsPage = () => {
   const { t, currentLanguage } = useTranslation();
-  const news_data = currentLanguage === "vn" ? vn_news_data : en_news_data;
+  const news_data = currentLanguage === "vn" ? vn_news_data : currentLanguage === "kr" ? kr_news_data : en_news_data ;
   
   return (
     <>

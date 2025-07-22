@@ -39,6 +39,18 @@ const languageOptions = [
     ),
     id: "vn",
   },
+  {
+    id: "kr",
+    icon: (
+      <Image
+        src="/images/flags/kr-icon.svg"
+        alt="Korea"
+        width={24}
+        height={20}
+        className="h-5 w-6"
+      />
+    ),
+  },
 ] as LanguageOption[];
 
 const Header = () => {
