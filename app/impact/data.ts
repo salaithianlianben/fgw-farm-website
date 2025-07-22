@@ -160,12 +160,14 @@ export const en_extra_steps = [
     title: "Alternative Protein & Oil – Marine Conservation",
     content:
       "We help protect marine ecosystems by providing insect-based protein as a sustainable alternative to juvenile fish used in animal feed.",
+    img: "/images/impact/Alternative protein & oil 1.jpg",
   },
   {
     id: 3,
     title: "Alternative Protein & Oil – Land Conservation",
     content:
       "By replacing grain and palm oil with insect-derived proteins and oils, we reduce deforestation, prevent desertification, and support biodiversity.",
+    img: "/images/impact/Alternative protein & oil 2.jpg",
   },
 ];
 
@@ -175,12 +177,14 @@ export const kr_extra_steps = [
     title: "대체 단백질 & 오일 – 바다를 지키다",
     content:
       "곤충에서 얻은 단백질은 기존에 사료 생산에 사용되던 어린 물고기를 대체함으로써 해양 생태계를 보호하는 데 기여하고 있습니다.",
+    img: "/images/impact/Alternative protein & oil 1.jpg",
   },
   {
     id: 3,
     title: "대체 단백질 & 오일 – 토양 보호",
     content:
       "곤충 유래 단백질과 오일은 곡물 및 팜유의 대안이 되어 산림 파괴 감소, 사막화 방지, 그리고 생물다양성 보존에 도움이 됩니다.",
+    img: "/images/impact/Alternative protein & oil 2.jpg",
   },
 ];
 
@@ -190,11 +194,13 @@ export const vn_extra_steps = [
     title: "Protein & Dầu Thay Thế – Bảo Vệ Đại Dương",
     content:
       "Chúng tôi góp phần bảo vệ hệ sinh thái biển bằng cách cung cấp protein từ côn trùng thay thế cá con thường dùng trong sản xuất thức ăn chăn nuôi.",
+    img: "/images/impact/Alternative protein & oil 1.jpg",
   },
   {
     id: 3,
     title: "Protein & Dầu Thay Thế – Bảo Vệ Đất",
     content:
       "Việc thay thế ngũ cốc và dầu cọ bằng protein và dầu từ côn trùng giúp giảm phá rừng, ngăn chặn sa mạc hóa và bảo tồn đa dạng sinh học.",
+    img: "/images/impact/Alternative protein & oil 2.jpg",
   },
 ];

@@ -9,7 +9,6 @@ import {
   en_recycling_process,
   vn_extra_steps,
   vn_recycling_process,
-  kr_recycle_process_data,
   kr_recycling_process,
   kr_extra_steps
 } from "./data";
@@ -49,7 +48,7 @@ const ImpactPage = () => {
           {extra_steps_.map((s, idx) => (
             <div key={idx}>
               <img
-                src="/images/impact/Alternative protein & oil.jpg"
+                src={s.img}
                 alt="Alternative protein and oil"
                 className="h-auto max-h-[400px] w-full object-cover"
               />
