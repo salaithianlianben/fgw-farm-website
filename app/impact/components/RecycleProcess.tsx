@@ -243,7 +243,7 @@ const RecycleProcess = () => {
       id: 3,
       image: "/images/impact/feed.jpg",
       alt: "Feed production",
-      title: "sản xuất thức ăn chăn nuôin",
+      title: "sản xuất thức ăn chăn nuôi",
       icon: ChevronRight,
       iconRotation: "rotate-30",
       iconPosition: "absolute bottom-5 md:bottom-7 left-8 md:left-10",

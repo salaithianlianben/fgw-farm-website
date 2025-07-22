@@ -84,7 +84,7 @@ export const translations: Translations = {
       news: 'Thông tin',
       products: 'Sản phẩm',
       technology: 'Công nghệ',
-      impact: 'Sự va chạm'
+      impact: 'sự ảnh hưởng'
     },
     contact: {
       contact: 'Thông tin liên hệ',
