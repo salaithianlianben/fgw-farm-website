@@ -9,6 +9,9 @@ import {
   en_recycling_process,
   vn_extra_steps,
   vn_recycling_process,
+  kr_recycle_process_data,
+  kr_recycling_process,
+  kr_extra_steps
 } from "./data";
 
 const ImpactPage = () => {
@@ -19,14 +22,14 @@ const ImpactPage = () => {
       ? en_recycling_process
       : currentLanguage === "vn"
         ? vn_recycling_process
-        : en_recycling_process;
+        : kr_recycling_process;
 
   const extra_steps_ =
     currentLanguage === "en"
       ? en_extra_steps
       : currentLanguage === "vn"
         ? vn_extra_steps
-        : en_extra_steps;
+        : kr_extra_steps;
 
   return (
     <>

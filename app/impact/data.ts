@@ -107,31 +107,31 @@ export const kr_recycle_process_data = [
   {
     id: 1,
     img_path: "/images/impact/FOOD WASTE.jpg",
-    title: "Food Waste",
+    title: "음식물 쓰레기",
   },
   {
     id: 2,
-    title: "decomposition",
+    title: "분해",
     img_path: "/images/impact/decomposition.png",
   },
   {
     id: 3,
-    title: "Feed production",
+    title: "사료 생산",
     img_path: "/images/impact/feed.jpg",
   },
   {
     id: 4,
-    title: "Food",
+    title: "식품",
     img_path: "/images/impact/food.jpg",
   },
   {
     id: 5,
-    title: "Farming",
+    title: "농업",
     img_path: "/images/impact/farming.png",
   },
   {
     id: 6,
-    title: "Food Supply",
+    title: "사료 보조제",
     img_path: "/images/impact/food supplier.jpg",
   },
 ] as RecycleProcessItem[];
@@ -140,6 +140,12 @@ export const en_recycling_process = {
   title: "Zero-waste recycling",
   content:
     "Our insect-based system enables 100% bio-conversion of organic food waste without generating wastewater, ensuring a clean and sustainable recycling process.",
+};
+
+export const kr_recycling_process = {
+  title: "제로 웨이스트 재활용",
+  content:
+    "저희의 곤충 기반 시스템은 유기성 음식물 폐기물을 100% 전환하며 폐수를 생성하지 않는 청정하고 지속 가능한 재활용 공정을 실현합니다.",
 };
 
 export const vn_recycling_process = {
@@ -160,6 +166,21 @@ export const en_extra_steps = [
     title: "Alternative Protein & Oil – Land Conservation",
     content:
       "By replacing grain and palm oil with insect-derived proteins and oils, we reduce deforestation, prevent desertification, and support biodiversity.",
+  },
+];
+
+export const kr_extra_steps = [
+  {
+    id: 2,
+    title: "대체 단백질 & 오일 – 바다를 지키다",
+    content:
+      "곤충에서 얻은 단백질은 기존에 사료 생산에 사용되던 어린 물고기를 대체함으로써 해양 생태계를 보호하는 데 기여하고 있습니다.",
+  },
+  {
+    id: 3,
+    title: "대체 단백질 & 오일 – 토양 보호",
+    content:
+      "곤충 유래 단백질과 오일은 곡물 및 팜유의 대안이 되어 산림 파괴 감소, 사막화 방지, 그리고 생물다양성 보존에 도움이 됩니다.",
   },
 ];
 
