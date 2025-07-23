@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { en_products_data, vn_products_data } from "../data/products";
+import { en_products_data, kr_products_data, vn_products_data } from "../data/products";
 import { Product } from "@/types/product";
 import { useParams } from "next/navigation";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 const ProductDetail = () => {
   const { currentLanguage } = useTranslation();
   
-  const products_data = currentLanguage === "en" ? en_products_data : vn_products_data;
+  const products_data = currentLanguage === "en" ? en_products_data : currentLanguage === "vn" ? vn_products_data : kr_products_data;
 
   const { id } = useParams<{ id: string }>();
   const [productData, setProductData] = useState<Product | undefined>();

@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { en_news_data, vn_news_data } from "../data";
+import { en_news_data, kr_news_data, vn_news_data } from "../data";
 import { News } from "../StaticTypes";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -11,7 +11,7 @@ const NewsDetail = () => {
   const { id } = useParams<{ id: string }>();
   const { currentLanguage } = useTranslation();
   const [newsItem, setNewsItem] = useState<News | undefined>();
-  const news_data = currentLanguage === "vn" ? vn_news_data : en_news_data;
+  const news_data = currentLanguage === "vn" ? vn_news_data : currentLanguage === "en" ?  en_news_data : kr_news_data;
 
   useEffect(() => {
     if (id) {
