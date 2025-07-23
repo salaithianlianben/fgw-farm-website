@@ -3,10 +3,11 @@ import AreaUses from "@/components/AreaUses";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
 import ProductsFeature from "@/components/Products";
-import Video from "@/components/Video";
+import CompanyStructuredData from "@/components/SEO/company_structured_data";
+// import Video from "@/components/Video";
 import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title:
     "FGW Farm Co., Ltd - Black Soldier Fly Farming & Sustainable Agriculture Solutions",
   description:
@@ -26,6 +27,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <CompanyStructuredData />
       <ScrollUp />{" "}
       <Hero image_path="/images/hero/3.jpg" header_name="Products" />
       <ProductsFeature />
